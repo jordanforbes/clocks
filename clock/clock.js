@@ -2,13 +2,14 @@ interval=1000
 
 sec=1
 min=0
+hour=0
 middle=":0"
 hourMiddle="0"
 
 	$(".clock").html("0:00")
 function second(){
 	setTimeout(function(){
-		$(".clock").html(hourMiddle+min+middle +sec)
+		$(".clock").html(hour+":"+hourMiddle+min+middle +sec)
 		sec +=1
 		second()
 	},interval);
